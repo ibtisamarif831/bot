@@ -7,8 +7,6 @@ const port = 3000;
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
+app.listen(3000, "0.0.0.0");
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
 setInterval(bot.sendPeriodicMessage, interval);
