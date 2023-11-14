@@ -1,5 +1,5 @@
 const bot = require("./bot");
-const interval = 1000 * 60 * 5;
+const interval = 1000 * 60 * 2;
 const express = require("express");
 const app = express();
 const port = 3000;
