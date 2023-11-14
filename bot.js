@@ -10,7 +10,14 @@ async function sendPeriodicMessage() {
   console.log("Job Started");
   try {
     const html = await httpClient.get(
-      "https://service2.diplo.de/rktermin/extern/appointment_showForm.do?locationCode=isla&realmId=108&categoryId=1600"
+      "https://service2.diplo.de/rktermin/extern/appointment_showForm.do?locationCode=isla&realmId=108&categoryId=1600",
+      {
+        headers: {
+          // Add any necessary headers (e.g., user-agent)
+          "User-Agent":
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Safari/605.1.15",
+        },
+      }
     );
     console.log(html.data);
     const $ = load(html.data);
